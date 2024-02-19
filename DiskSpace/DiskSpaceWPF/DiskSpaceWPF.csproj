@@ -13,4 +13,13 @@
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\save.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\hard-drive.ico" />
+    <Resource Include="Assets\hard-drive.ico" />
+  </ItemGroup>
+
 </Project>

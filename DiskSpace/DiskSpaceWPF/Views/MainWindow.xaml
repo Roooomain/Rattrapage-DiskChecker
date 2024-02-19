@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:DiskSpaceWPF"
         mc:Ignorable="d"
-        Title="" SnapsToDevicePixels="True" Height="450" Width="800">
+        Title="DiskSpace" SnapsToDevicePixels="True" Height="450" Width="800" Icon="../Assets/hard-drive.ico">
 
 	<Grid>
 		<Grid.ColumnDefinitions>
