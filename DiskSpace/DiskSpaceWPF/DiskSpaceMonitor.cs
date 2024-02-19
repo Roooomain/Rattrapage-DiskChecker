@@ -1,7 +1,8 @@
-﻿using System.Timers;
-using DiskSpaceConsole.Helper;
+﻿using System.IO;
+using System.Timers;
+using DiskSpaceWPF.Helper;
 
-namespace DiskSpaceConsole;
+namespace DiskSpaceWPF;
 
 public class DiskSpaceMonitor : ISubject
 {
@@ -10,17 +11,31 @@ public class DiskSpaceMonitor : ISubject
     
     private System.Timers.Timer _timer;
     private DriveInfo _driveInfo;
+    
+    private static readonly DiskSpaceMonitor _instance = new DiskSpaceMonitor();
 
-    public DiskSpaceMonitor(int interval)
+    public static DiskSpaceMonitor Instance
     {
-        _timer = new System.Timers.Timer(interval * 1000);
+        get { return _instance; }
+    }
+    
+    private DiskSpaceMonitor()
+    {
+        _timer = new System.Timers.Timer(10 * 1000);
         _driveInfo = new DriveInfo("C");
-        _timer.Elapsed += OnTimerInterval;
+        _timer.Elapsed += OnTimedEvent;
         _timer.AutoReset = true;
         _timer.Enabled = true;
     }
 
-    private void OnTimerInterval(Object source, ElapsedEventArgs e)
+    public void UpdateInterval(int interval)
+    {
+        _timer.Stop();
+        _timer.Interval = interval * 1000;
+        _timer.Start();
+    }
+    
+    private void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
         CheckDiskSpace();
     }
@@ -48,9 +63,9 @@ public class DiskSpaceMonitor : ISubject
         _diskSpaceInfo = new DiskSpaceInfo
         {
             FreeSpace = _driveInfo.AvailableFreeSpace, 
-            TotalSpace = _driveInfo.TotalSize
+            TotalSpace = _driveInfo.TotalSize, 
+            Interval = (_timer.Interval/1000)
         };
-        Console.WriteLine($"Espace disponible sur le disque C: {_diskSpaceInfo.FreeSpace} sur {_diskSpaceInfo.TotalSpace} bytes");
         Notify();
     }   
 }

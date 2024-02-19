@@ -17,8 +17,10 @@ namespace DiskSpaceConsole
 
             monitor.Attach(logger);
 
-            Console.WriteLine($"Surveillance de l'espace disque démarrée. Vérification toutes les {interval} secondes.");
-            Console.WriteLine("Appuyez sur 'Enter' pour arrêter...");
+            Console.WriteLine($"Surveillance du disque C: toutes les {interval} secondes.");
+            Console.WriteLine($"Destination du fichier log : {logger.LogFilePath}");
+            Console.WriteLine("Appuyez sur une touche pour arrêter...");
+            monitor.CheckDiskSpace();
             Console.ReadLine();
         }
     }
