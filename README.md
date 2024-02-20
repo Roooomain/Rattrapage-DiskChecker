@@ -34,7 +34,8 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 - **Personnalisation :** L'utilisateur peut définir l'intervalle de temps (en secondes) entre chaque vérification. Par défaut, cet intervalle est de 10 secondes.
 - **Log :** L'application WPF permet de visualiser le fichier log directement depuis l'interface, sans arrêter le processus d'enregistrement.
 
-/!\ Veuillez à ne pas écrire dans le fichier log, sinon l'application ne pourra pas écrire dedans /!\
+<img width="2704" alt="DiskChecker - Warning" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/fe101575-44ee-475e-86b1-f9cf51ccaafe">
+
 
 ### Fonctionnement
 
