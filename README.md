@@ -18,11 +18,12 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 
 ### Diagrammes
 1. Diagramme de classe :
-<img width="3168" alt="DiskSpace CLASS V1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/d193ecb1-a437-42c8-a943-19aa82ff56d2">
+<img width="3168" alt="DiskSpace CLASS V1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/0193fce4-ef37-44e1-9e50-2d5eaface817">
 
 2. Diagramme cas d'utilisation :
 
 3. Diagramme séquence :
+<img width="4574" alt="DiskSpace Sequence v1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/07a973f1-e112-41f7-bc1c-addcd61eef7b">
 
 ## Version 2.0 - Application WPF
 
@@ -42,9 +43,8 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 
 ### Diagrammes
 1. Diagramme de classe :
-<img width="3568" alt="DiskSpace Classe v2 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/664cdc4f-1c79-4450-8cb1-47beced7b30f">
+<img width="3175" alt="DiskSpace Classe v2 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/8ac97d02-72e8-4c59-b4ec-02063e037839">
 
 2. Diagramme cas d'utilisation :
 
 3. Diagramme séquence :
-<img width="4574" alt="DiskSpace Sequence v1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/add2ead8-3180-4c52-9f0b-47fcf211e93d">
