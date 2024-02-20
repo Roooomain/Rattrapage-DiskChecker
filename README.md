@@ -12,7 +12,7 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 
 ### Fonctionnement
 
-1. **Lancement du programme :** Exécutez l'application depuis la ligne de commande. Vous pouvez spécifier l'intervalle de temps en secondes comme argument. Exemple : `DiskChecker.exe 15` pour un intervalle de 15 secondes.
+1. **Lancement du programme :** Exécutez l'application depuis la ligne de commande. Vous pouvez spécifier l'intervalle de temps en secondes comme argument. Exemple : `DiskCheckerConsole.exe 15` pour un intervalle de 15 secondes.
 
 2. **Consultation des logs :** Les informations sont enregistrées dans un fichier log.
 
