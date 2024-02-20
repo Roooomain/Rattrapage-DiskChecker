@@ -48,3 +48,4 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 2. Diagramme cas d'utilisation :
 
 3. Diagramme séquence :
+<img width="6048" alt="DiskChecker - Sequence v2 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/e7a75ea2-ee02-4998-a580-e17584cfac71">
