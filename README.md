@@ -17,8 +17,12 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 2. **Consultation des logs :** Les informations sont enregistrées dans un fichier log.
 
 ### Diagrammes
-1. Diagramme de classes :
+1. Diagramme de classe :
 <img width="3168" alt="DiskSpace CLASS V1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/d193ecb1-a437-42c8-a943-19aa82ff56d2">
+
+2. Diagramme cas d'utilisation :
+
+3. Diagramme séquence :
 
 ## Version 2.0 - Application WPF
 
