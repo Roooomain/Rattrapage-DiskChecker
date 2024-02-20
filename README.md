@@ -10,7 +10,7 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 - **Personnalisation de l'intervalle :** L'utilisateur peut définir l'intervalle de temps (en secondes) entre chaque vérification. Par défaut, cet intervalle est de 10 secondes.
 - **Enregistrement dans un fichier log :** Toutes les informations sur l'espace disque sont enregistrées dans un fichier log.
 
-### Comment utiliser
+### Fonctionnement
 
 1. **Lancement de l'application :** Exécutez l'application depuis la ligne de commande. Vous pouvez spécifier l'intervalle de temps en secondes comme argument. Exemple : `DiskSpace.exe 15` pour un intervalle de 15 secondes.
 
@@ -28,7 +28,7 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 - **Surveillance continue :** L'application continue de surveiller l'espace disque et d'enregistrer les données sans interruption.
 - **Visualisation du fichier log :** L'application WPF permet de visualiser le fichier log directement depuis l'interface, sans arrêter le processus d'enregistrement.
 
-### Comment utiliser
+### Fonctionnement
 
 1. **Lancement de l'application :** Double-cliquez sur l'icône de l'application pour la lancer.
 2. **Configuration de l'intervalle :** Utilisez l'interface graphique pour ajuster l'intervalle de temps entre chaque vérification de l'espace disque.
