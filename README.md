@@ -25,3 +25,31 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 
 3. Diagramme séquence :
 <img width="4574" alt="DiskChecker - Sequence v1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/547687fa-4992-4b10-9014-82d06c5d8394">
+
+## Version 2.0 - Application WPF
+
+### Fonctionnalités
+
+- **Interface** : Contrairement à la version 1.0, cette version offre une interface utilisateur graphique pour une interaction plus intuitive.
+- **Personnalisation** : L'intervalle de temps entre chaque vérification de l'espace disque peut être ajusté via l'interface utilisateur.
+- **Log** : L'utilisateur peut consulter le fichier log directement depuis l'application sans interrompre le processus.
+
+### Fonctionnement
+
+1. **Lancement de l'application :** Double-cliquez sur l'icône de l'application pour la lancer. Aucun argument de ligne de commande n'est nécessaire pour cette version.
+
+2. **Paramétres :** Dans l'interface, vous pouvez régler l'intervalle entre chaque surveillance. La valeur par défaut est de 10 secondes.
+
+3. **Consultation des Logs :** Un onglet de l'interface permet de consulter le fichier log tout en continuant la surveillance.
+
+<img width="532" alt="DiskChecker - Warning" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/37d3be2d-8d58-431b-b5b8-cadc663f5fa8">
+
+### Diagrammes
+1. Diagramme de classe :
+<img width="3181" alt="DiskChecker - Classe v2 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/dcb1c4e4-a91a-4f6d-8522-ec4260debae2">
+
+2. Diagramme cas d'utilisation :
+<img width="4240" alt="DiskChecker - UseCase - v2 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/78b01340-a224-46a2-93de-1aaad493c81b">
+
+3. Diagramme séquence :
+<img width="6048" alt="DiskChecker - Sequence v2 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/36f4aa00-05e7-4117-896f-fa52f83f084f">
