@@ -37,7 +37,7 @@ public class DiskCheckerMonitoring : ISubject
     
     private void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
-        CheckDiskChecker();
+        CheckDisk();
     }
     
     public void Attach(IObserver observer)
@@ -58,7 +58,7 @@ public class DiskCheckerMonitoring : ISubject
         }
     }
 
-    public void CheckDiskChecker()
+    public void CheckDisk()
     {
         _DiskCheckerInfo = new DiskCheckerInfo
         {

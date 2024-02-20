@@ -28,7 +28,7 @@ namespace DiskCheckerWPF
             var home = Views.Home.Instance;
             Monitoring.Attach(logger);
             Monitoring.Attach(home);
-            Monitoring.CheckDiskChecker();
+            Monitoring.CheckDisk();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
