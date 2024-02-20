@@ -23,7 +23,6 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 2. Diagramme cas d'utilisation :
 
 3. Diagramme séquence :
-<img width="4574" alt="DiskSpace Sequence v1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/730cf9d6-fb6a-40cd-83bd-08a754423073">
 
 ## Version 2.0 - Application WPF
 
@@ -48,3 +47,4 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 2. Diagramme cas d'utilisation :
 
 3. Diagramme séquence :
+<img width="4574" alt="DiskSpace Sequence v1 0" src="https://github.com/Roooomain/Rattrapage-DiskSpace/assets/119046014/add2ead8-3180-4c52-9f0b-47fcf211e93d">
