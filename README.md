@@ -6,13 +6,13 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 
 ### Fonctionnalités
 
-- **Surveillance de l'espace disque :** L'application surveille l'espace disponible sur le disque dur C: et affiche les informations à intervalles réguliers.
-- **Personnalisation de l'intervalle :** L'utilisateur peut définir l'intervalle de temps (en secondes) entre chaque vérification. Par défaut, cet intervalle est de 10 secondes.
-- **Enregistrement dans un fichier log :** Toutes les informations sur l'espace disque sont enregistrées dans un fichier log.
+- **Surveillance :** L'application surveille l'espace disponible sur le disque dur C: et affiche les informations à intervalles réguliers.
+- **Personnalisation :** L'utilisateur peut définir l'intervalle de temps (en secondes) entre chaque vérification. Par défaut, cet intervalle est de 10 secondes.
+- **Log :** Toutes les informations sur l'espace disque sont enregistrées dans un fichier log.
 
 ### Fonctionnement
 
-1. **Lancement de l'application :** Exécutez l'application depuis la ligne de commande. Vous pouvez spécifier l'intervalle de temps en secondes comme argument. Exemple : `DiskSpace.exe 15` pour un intervalle de 15 secondes.
+1. **Lancement du programme :** Exécutez l'application depuis la ligne de commande. Vous pouvez spécifier l'intervalle de temps en secondes comme argument. Exemple : `DiskSpace.exe 15` pour un intervalle de 15 secondes.
 
 2. **Consultation des logs :** Les informations sont enregistrées dans un fichier log.
 
