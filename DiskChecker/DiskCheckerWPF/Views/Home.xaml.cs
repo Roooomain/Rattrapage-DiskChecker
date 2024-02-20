@@ -50,7 +50,7 @@ namespace DiskCheckerWPF.Views
             }
             else
             {
-                MessageBox.Show("Please enter a valid positive integer for the interval.");
+                MessageBox.Show("Entrer un nombre entier positif.");
             }
         }
         
