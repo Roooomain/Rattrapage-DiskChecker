@@ -1,9 +1,9 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
-using DiskSpaceWPF.Helper;
+using DiskCheckerWPF.Helper;
 
-namespace DiskSpaceWPF
+namespace DiskCheckerWPF
 {
     /// <summary>
     /// Interaction logic for App.xaml

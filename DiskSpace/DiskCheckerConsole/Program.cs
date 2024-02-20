@@ -1,6 +1,6 @@
-﻿using DiskSpaceConsole;
+﻿using DiskCheckerConsole;
 
-namespace DiskSpaceConsole
+namespace DiskCheckerConsole
 {
     internal static class Program
     {
@@ -12,15 +12,15 @@ namespace DiskSpaceConsole
                 interval = parsedInterval;
             }
 
-            var monitor = new DiskSpaceMonitor(interval);
-            var logger = DiskSpaceLogger.Instance;
+            var monitor = new DiskCheckerMonitoring(interval);
+            var logger = DiskCheckerLogger.Instance;
 
             monitor.Attach(logger);
 
-            Console.WriteLine($"Surveillance du disque C: toutes les {interval} secondes.");
+            Console.WriteLine($"Intervalle de surveillance du disque C : {interval} secondes.");
             Console.WriteLine($"Destination du fichier log : {logger.LogFilePath}");
             Console.WriteLine("Appuyez sur une touche pour arrêter...");
-            monitor.CheckDiskSpace();
+            monitor.CheckDisk();
             Console.ReadLine();
         }
     }

@@ -11,7 +11,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 
-namespace DiskSpaceWPF
+namespace DiskCheckerWPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,12 +23,12 @@ namespace DiskSpaceWPF
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
-            var monitor = DiskSpaceMonitor.Instance;
-            var logger = DiskSpaceLogger.Instance;
+            var Monitoring = DiskCheckerMonitoring.Instance;
+            var logger = DiskCheckerLogger.Instance;
             var home = Views.Home.Instance;
-            monitor.Attach(logger);
-            monitor.Attach(home);
-            monitor.CheckDiskSpace();
+            Monitoring.Attach(logger);
+            Monitoring.Attach(home);
+            Monitoring.CheckDiskChecker();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -56,7 +56,7 @@ namespace DiskSpaceWPF
             try
             {
                 // Construire le chemin complet vers le fichier log
-                var logFilePath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "logDiskSpace.log");
+                var logFilePath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "logDiskChecker.log");
 
                 // Vérifier si le fichier log existe
                 if (System.IO.File.Exists(logFilePath))

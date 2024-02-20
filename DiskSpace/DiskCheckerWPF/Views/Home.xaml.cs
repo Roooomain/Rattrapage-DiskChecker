@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 using System.Windows.Controls;
 using LiveCharts.Wpf;
 using LiveCharts;
-using DiskSpaceWPF.Helper;
+using DiskCheckerWPF.Helper;
 
-namespace DiskSpaceWPF.Views
+namespace DiskCheckerWPF.Views
 {
     /// <summary>
     /// Logique d'interaction pour Home.xaml
@@ -46,7 +46,7 @@ namespace DiskSpaceWPF.Views
         {
             if (int.TryParse(txtInterval.Text, out int interval) && interval > 0)
             {
-                DiskSpaceMonitor.Instance.UpdateInterval(interval);
+                DiskCheckerMonitoring.Instance.UpdateInterval(interval);
             }
             else
             {
@@ -54,7 +54,7 @@ namespace DiskSpaceWPF.Views
             }
         }
         
-        public void Update(DiskSpaceInfo info)
+        public void Update(DiskCheckerInfo info)
         {
             Dispatcher.Invoke(() =>
             {

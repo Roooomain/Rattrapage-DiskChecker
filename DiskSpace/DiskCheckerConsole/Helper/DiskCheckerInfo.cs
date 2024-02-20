@@ -1,6 +1,6 @@
-﻿namespace DiskSpaceConsole.Helper;
+﻿namespace DiskCheckerConsole.Helper;
 
-public class DiskSpaceInfo
+public class DiskCheckerInfo
 {
     public long FreeSpace { get; set; }
     public long TotalSpace { get; set; }

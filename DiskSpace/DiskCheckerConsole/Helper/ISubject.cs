@@ -1,4 +1,4 @@
-﻿namespace DiskSpaceConsole.Helper;
+﻿namespace DiskCheckerConsole.Helper;
 
 public interface ISubject
 {

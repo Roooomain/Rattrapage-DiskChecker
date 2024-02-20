@@ -1,25 +1,25 @@
 ﻿using System.IO;
 using System.Timers;
-using DiskSpaceWPF.Helper;
+using DiskCheckerWPF.Helper;
 
-namespace DiskSpaceWPF;
+namespace DiskCheckerWPF;
 
-public class DiskSpaceMonitor : ISubject
+public class DiskCheckerMonitoring : ISubject
 {
     private List<IObserver> _observers = new List<IObserver>();
-    private DiskSpaceInfo _diskSpaceInfo;
+    private DiskCheckerInfo _DiskCheckerInfo;
     
     private System.Timers.Timer _timer;
     private DriveInfo _driveInfo;
     
-    private static readonly DiskSpaceMonitor _instance = new DiskSpaceMonitor();
+    private static readonly DiskCheckerMonitoring _instance = new DiskCheckerMonitoring();
 
-    public static DiskSpaceMonitor Instance
+    public static DiskCheckerMonitoring Instance
     {
         get { return _instance; }
     }
     
-    private DiskSpaceMonitor()
+    private DiskCheckerMonitoring()
     {
         _timer = new System.Timers.Timer(10 * 1000);
         _driveInfo = new DriveInfo("C");
@@ -37,7 +37,7 @@ public class DiskSpaceMonitor : ISubject
     
     private void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
-        CheckDiskSpace();
+        CheckDiskChecker();
     }
     
     public void Attach(IObserver observer)
@@ -54,13 +54,13 @@ public class DiskSpaceMonitor : ISubject
     {
         foreach (var observer in _observers)
         {
-            observer.Update(_diskSpaceInfo);
+            observer.Update(_DiskCheckerInfo);
         }
     }
 
-    public void CheckDiskSpace()
+    public void CheckDiskChecker()
     {
-        _diskSpaceInfo = new DiskSpaceInfo
+        _DiskCheckerInfo = new DiskCheckerInfo
         {
             FreeSpace = _driveInfo.AvailableFreeSpace, 
             TotalSpace = _driveInfo.TotalSize, 

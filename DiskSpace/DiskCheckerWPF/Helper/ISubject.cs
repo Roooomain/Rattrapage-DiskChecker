@@ -1,4 +1,4 @@
-﻿namespace DiskSpaceWPF.Helper;
+﻿namespace DiskCheckerWPF.Helper;
 public interface ISubject
 {
     void Attach(IObserver observer);

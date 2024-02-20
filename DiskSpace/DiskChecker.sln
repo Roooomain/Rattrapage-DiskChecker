@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiskSpaceConsole", "DiskSpaceConsole\DiskSpaceConsole.csproj", "{0DF900AD-20DA-458F-BB9A-2F9B06362E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiskCheckerConsole", "DiskCheckerConsole\DiskCheckerConsole.csproj", "{0DF900AD-20DA-458F-BB9A-2F9B06362E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskSpaceWPF", "DiskSpaceWPF\DiskSpaceWPF.csproj", "{4E75D351-2CCC-41F9-85E0-A59B37DB01A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskCheckerWPF", "DiskCheckerWPF\DiskCheckerWPF.csproj", "{4E75D351-2CCC-41F9-85E0-A59B37DB01A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

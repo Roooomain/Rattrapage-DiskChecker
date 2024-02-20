@@ -1,17 +1,17 @@
 ﻿using System.Timers;
-using DiskSpaceConsole.Helper;
+using DiskCheckerConsole.Helper;
 
-namespace DiskSpaceConsole;
+namespace DiskCheckerConsole;
 
-public class DiskSpaceMonitor : ISubject
+public class DiskCheckerMonitoring : ISubject
 {
     private List<IObserver> _observers = new List<IObserver>();
-    private DiskSpaceInfo _diskSpaceInfo;
+    private DiskCheckerInfo _DiskCheckerInfo;
     
     private System.Timers.Timer _timer;
     private DriveInfo _driveInfo;
 
-    public DiskSpaceMonitor(int interval)
+    public DiskCheckerMonitoring(int interval)
     {
         _timer = new System.Timers.Timer(interval * 1000);
         _driveInfo = new DriveInfo("C");
@@ -22,7 +22,7 @@ public class DiskSpaceMonitor : ISubject
 
     private void OnTimerInterval(Object source, ElapsedEventArgs e)
     {
-        CheckDiskSpace();
+        CheckDisk();
     }
     
     public void Attach(IObserver observer)
@@ -39,18 +39,18 @@ public class DiskSpaceMonitor : ISubject
     {
         foreach (var observer in _observers)
         {
-            observer.Update(_diskSpaceInfo);
+            observer.Update(_DiskCheckerInfo);
         }
     }
 
-    public void CheckDiskSpace()
+    public void CheckDisk()
     {
-        _diskSpaceInfo = new DiskSpaceInfo
+        _DiskCheckerInfo = new DiskCheckerInfo
         {
             FreeSpace = _driveInfo.AvailableFreeSpace, 
             TotalSpace = _driveInfo.TotalSize
         };
-        Console.WriteLine($"Espace disponible sur le disque C: {_diskSpaceInfo.FreeSpace} sur {_diskSpaceInfo.TotalSpace} bytes");
+        Console.WriteLine($"Espace disponible sur le disque C: {_DiskCheckerInfo.FreeSpace} sur {_DiskCheckerInfo.TotalSpace} bytes");
         Notify();
     }   
 }
