@@ -31,7 +31,7 @@ Cette application permet de surveiller l'espace disponible sur votre disque dur 
 - **Interface :** Contrairement à la version console, cette version offre une interface graphique permettant une interaction plus intuitive avec l'application.
 - **Surveillance :** L'application continue de surveiller l'espace disque et d'enregistrer les données sans interruption.
 - **Personnalisation :** L'utilisateur peut définir l'intervalle de temps (en secondes) entre chaque vérification. Par défaut, cet intervalle est de 10 secondes.
-- **Log :** L'application WPF permet de visualiser le fichier log directement depuis l'interface, sans arrêter le processus d'enregistrement.
+- **Log :** L'application WPF permet de visualiser le fichier log directement depuis l'interface, sans arrêter le processus d'enregistrement. /!\ Veuillez à ne pas écrire dans le fichier log, sinon l'application ne pourra pas écrire dedans /!\
 
 ### Fonctionnement
 
