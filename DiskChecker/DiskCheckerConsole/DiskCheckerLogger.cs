@@ -7,6 +7,8 @@ public class DiskCheckerLogger : IObserver
 {
     // Implentation du design pattern Singleton
     private static readonly DiskCheckerLogger _instance = new DiskCheckerLogger();
+    
+    // Chemin du fichier de log
     public string LogFilePath = Path.Combine(Path.GetTempPath(), "logDiskChecker.log");
     public static DiskCheckerLogger Instance
     {
