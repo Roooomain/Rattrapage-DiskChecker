@@ -4,16 +4,23 @@ using DiskCheckerWPF.Helper;
 
 namespace DiskCheckerWPF;
 
+/// <summary>
+/// Classe qui surveille l'espace disque
+/// </summary>
 public class DiskCheckerMonitoring : ISubject
 {
+    // Liste des observateurs
     private List<IObserver> _observers = new List<IObserver>();
-    private DiskCheckerInfo _DiskCheckerInfo;
     
-    private System.Timers.Timer _timer;
+    // Informations sur l'espace disque
+    private DiskCheckerInfo _DiskCheckerInfo;
     private DriveInfo _driveInfo;
     
+    // Timer pour la surveillance
+    private System.Timers.Timer _timer;
+    
+    // Implentation du design pattern Singleton
     private static readonly DiskCheckerMonitoring _instance = new DiskCheckerMonitoring();
-
     public static DiskCheckerMonitoring Instance
     {
         get { return _instance; }
@@ -28,6 +35,7 @@ public class DiskCheckerMonitoring : ISubject
         _timer.Enabled = true;
     }
 
+    // Methode pour changer l'intervalle de surveillance
     public void UpdateInterval(int interval)
     {
         _timer.Stop();
@@ -58,6 +66,7 @@ public class DiskCheckerMonitoring : ISubject
         }
     }
 
+    // Methode pour verifier l'espace disque
     public void CheckDisk()
     {
         _DiskCheckerInfo = new DiskCheckerInfo

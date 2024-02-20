@@ -3,6 +3,9 @@ using DiskCheckerConsole.Helper;
 
 namespace DiskCheckerConsole;
 
+/// <summary>
+/// Classe qui surveille l'espace disque
+/// </summary>
 public class DiskCheckerMonitoring : ISubject
 {
     private List<IObserver> _observers = new List<IObserver>();

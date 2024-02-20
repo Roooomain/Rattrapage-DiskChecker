@@ -1,15 +1,5 @@
 ﻿using System.Diagnostics;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
 
 namespace DiskCheckerWPF
 {
@@ -23,12 +13,16 @@ namespace DiskCheckerWPF
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
-            var Monitoring = DiskCheckerMonitoring.Instance;
+            
+            // Initialiser le monitoring
+            var monitoring = DiskCheckerMonitoring.Instance;
             var logger = DiskCheckerLogger.Instance;
             var home = Views.Home.Instance;
-            Monitoring.Attach(logger);
-            Monitoring.Attach(home);
-            Monitoring.CheckDisk();
+            
+            // Attacher les observateurs (design pattern Observer)
+            monitoring.Attach(logger);
+            monitoring.Attach(home);
+            monitoring.CheckDisk();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -55,7 +49,7 @@ namespace DiskCheckerWPF
         {
             try
             {
-                // Construire le chemin complet vers le fichier log
+                // Chemin du fichier log
                 var logFilePath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "logDiskChecker.log");
 
                 // Vérifier si le fichier log existe
@@ -65,21 +59,21 @@ namespace DiskCheckerWPF
                     {
                         FileName = "notepad.exe", // Utiliser Notepad pour ouvrir le fichier
                         Arguments = logFilePath, // Passer le chemin du fichier comme argument
-                        UseShellExecute = true,
-                        WindowStyle = ProcessWindowStyle.Normal,
+                        UseShellExecute = true, // Utiliser le shell pour démarrer le processus
+                        WindowStyle = ProcessWindowStyle.Normal,// Afficher la fenêtre de Notepad
                     };
 
                     Process.Start(psi);
                 }
                 else
                 {
-                    // Optionnellement, afficher un message si le fichier n'existe pas
+                    // Afficher un message si le fichier log n'existe pas
                     MessageBox.Show("Le fichier log n'existe pas.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)
             {
-                // Optionnellement, gérer l'exception, par exemple afficher un message d'erreur
+                // Afficher un message si une erreur survient
                 MessageBox.Show($"Une erreur est survenue: {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
